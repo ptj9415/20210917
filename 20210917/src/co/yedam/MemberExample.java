@@ -25,6 +25,9 @@ public class MemberExample {
 				System.out.println("¾ÆÀÌµð; " + member1.memberId);
 			}
 		}
+		Student s1 = new Student();
+		s1.name = "hong";
+		s1.score = 90;
 	}
 
 }

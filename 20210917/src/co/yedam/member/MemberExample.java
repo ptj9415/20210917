@@ -1,5 +1,7 @@
 package co.yedam.member;
 
+import co.yedam.Student;
+
 public class MemberExample {
 	public static void main(String[] args) {
 		Member m1 = new Member("user1", "parkjiwon", "seoul"); // 생성자 호출
@@ -26,6 +28,9 @@ public class MemberExample {
 //		m3.name = "괴물";
 		m3.showInfo();
 		
+		Student s1 = new Student();
+		s1.name = "hong";
+		s1.score = 90;
 
 		
 		
