@@ -1,9 +1,9 @@
 package Bank;
 
 public class Account {
-	private static String ano;
-	private static String owner;
-	private static int balance;
+	private String ano;
+	private String owner;
+	private int balance;
 
 	public Account(String ano, String owner, int balance) {
 		this.ano = ano;
