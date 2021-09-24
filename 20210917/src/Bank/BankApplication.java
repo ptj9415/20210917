@@ -38,16 +38,25 @@ public class BankApplication {
 
 	private static void createAccount() {
 		System.out.println("===계좌 생성===");
-		String account = readStr("계좌번호: ");
-		String name = readStr("계좌주: ");
-		String money = readStr("초기입금액: ");
+		String ano = readStr("계좌번호: ");
+		String owner = readStr("계좌주: ");
+		int balance = readInt("초기입금액: ");
+		Account account = new Account(ano, owner, balance);
+		for (int i = 0; i < accountArray.length; i++) {
+			if (accountArray[i] == null) {
+				accountArray[i] = account;
+				break;
+			}
+		}
 		System.out.println("결과: 계좌가 생성되었습니다.");
 	}
 
 	private static void accountList() {
-		for(int i = 0; i<accountArray.length; i++) {
-			if(accountArray[i] != null)
-				System.out.println();
+		System.out.println("===계좌 목록===");
+		for (int i = 0; i < accountArray.length; i++) {
+			if (accountArray[i] != null) {
+				Account.showInfo();
+			}
 		}
 	}
 
@@ -65,7 +74,7 @@ public class BankApplication {
 	}
 
 	public static int readInt(String msg) {
-		System.out.println(msg);
+		System.out.print(msg);
 		int result = 0;
 		while (true) {
 			String val = scn.nextLine();

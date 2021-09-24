@@ -1,9 +1,9 @@
 package Bank;
 
 public class Account {
-	private String ano;
-	private String owner;
-	private int balance;
+	private static String ano;
+	private static String owner;
+	private static int balance;
 
 	public Account(String ano, String owner, int balance) {
 		this.ano = ano;
@@ -35,7 +35,7 @@ public class Account {
 		this.balance = balance;
 	}
 
-	public void showInfo() {
-		System.out.println();
+	public static void showInfo() {
+		System.out.println("계좌번호: " + ano + ", 계좌주: " + owner + ", 초기 입금액: " + balance);
 	}
 }
